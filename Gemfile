@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 gem 'rspec'
 gem 'data_mapper'
+gem 'dm-postgres-adapater'
+gem 'database_cleaner'
 gem 'capybara'
 gem 'cucumber'
 gem 'cucumber-sinatra'
