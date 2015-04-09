@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+gem 'rspec'
+gem 'data_mapper'
+gem 'capybara'
+gem 'cucumber'
+gem 'cucumber-sinatra'
+gem 'sinatra'
