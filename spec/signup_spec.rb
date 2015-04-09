@@ -14,7 +14,7 @@ feature 'signing up' do
     sign_up
     expect(User.count).to eq 1
     expect(current_path).to eq('/links')
-    expect(page).to have_content('Welcome') # add user email
+    expect(page).to have_content('Welcome, ' + User.first.email)
   end
 
   def sign_up email='a@a.com', password='baseball'

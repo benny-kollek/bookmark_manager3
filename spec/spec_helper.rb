@@ -3,6 +3,8 @@ require 'bookmark_manager'
 require 'database_cleaner'
 require 'database_setup'
 
+ENV['RACK_ENV'] = 'test'
+
 Capybara.app = BookmarkManager
 RSpec.configure do |config|
 
