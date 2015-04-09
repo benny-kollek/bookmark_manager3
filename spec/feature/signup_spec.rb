@@ -1,7 +1,9 @@
 require 'capybara/rspec'
 require 'user'
+require_relative 'user_management_helpers'
 
 feature 'signing up' do
+  include User_Management_Helpers
   scenario 'clicking sign up button' do
     visit('/')
     find_button('Sign Up').click
@@ -15,12 +17,5 @@ feature 'signing up' do
     expect(User.count).to eq 1
     expect(current_path).to eq('/links')
     expect(page).to have_content('Welcome, ' + User.first.email)
-  end
-
-  def sign_up email='a@a.com', password='baseball'
-    visit '/signup'
-    fill_in :email, with: email
-    fill_in :password, with: password
-    click_button 'Sign Up'
   end
 end
